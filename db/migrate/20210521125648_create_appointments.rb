@@ -1,10 +1,11 @@
 class CreateAppointments < ActiveRecord::Migration[6.0]
   def change
     create_table :appointments do |t|
+      t.references :patient, null: false, foreign_key: true
+      t.references :doctor, null: false, foreign_key: true
       t.datetime :appointment_date
-      t.bigint :doctor_id
-      t.bigint :patient_id
-
+      t.string :location
+      t.string :doctor_name
       t.timestamps
     end
   end
