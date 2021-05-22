@@ -1,7 +1,146 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# Doctor.destroy_all
+=begin
+Doctor.create!([{
+  firstname: 'Andrew',
+  lastname: 'Okoh',
+  email: 'a.okoh@gmail.com',
+  phonenumber: '08123467820',
+  specialty: 'Gynecologist',
+  years_of_experience: 6,
+  picture: 'https://i.imgur.com/g8IFvWq.jpg',
+  location: 'Lagos',
+},
+{
+  firstname: 'Carol',
+  lastname: 'Brown',
+  email: 'c.brown@gmail.com',
+  phonenumber: '08123887820',
+  specialty: 'Gynecologist',
+  years_of_experience: 10,
+  picture: 'https://i.imgur.com/yUBs111.jpg',
+  location: 'Lagos',
+},
+{
+  firstname: 'Mary',
+  lastname: 'Okeke',
+  email: 'm.okeke@gmail.com',
+  phonenumber: '08173887824',
+  specialty: 'Paediatrician',
+  years_of_experience: 8,
+  picture: 'https://i.imgur.com/FTFHfLx.jpg',
+  location: 'Abuja',
+},
+{
+  firstname: 'Michael',
+  lastname: 'Igwe',
+  email: 'm.igwe@yahoo.com',
+  phonenumber: '08173887855',
+  specialty: 'Paediatrician',
+  years_of_experience: 5,
+  picture: 'https://i.imgur.com/R7sYKTz.jpg',
+  location: 'Abuja',
+},
+{
+  firstname: 'Thompson',
+  lastname: 'Clark',
+  email: 't.clark@yahoo.com',
+  phonenumber: '08173887833',
+  specialty: 'Neurologist',
+  years_of_experience: 12,
+  picture: 'https://i.imgur.com/R7sYKTz.jpg',
+  location: 'Port Harcourt',
+},
+{
+  firstname: 'Bill',
+  lastname: 'George',
+  email: 'b.george@gmail.com',
+  phonenumber: '08173887844',
+  specialty: 'Surgeon',
+  years_of_experience: 15,
+  picture: 'https://i.imgur.com/KIX4y5m.jpg',
+  location: 'Port Harcourt',
+},
+{
+  firstname: 'Bridget',
+  lastname: 'Green',
+  email: 'b.green@yahoo.com',
+  phonenumber: '08343887844',
+  specialty: 'Surgeon',
+  years_of_experience: 11,
+  picture: 'https://i.imgur.com/LlpEZxs.jpg',
+  location: 'Abuja',
+},
+{
+  firstname: 'Jennifer',
+  lastname: 'Hudson',
+  email: 'j.hudson@gmail.com',
+  phonenumber: '08343887881',
+  specialty: 'Cardiologist',
+  years_of_experience: 7,
+  picture: 'https://i.imgur.com/LTJ8mJO.jpg',
+  location: 'Owerri',
+},
+{
+  firstname: 'Daniel',
+  lastname: 'Lewis',
+  email: 'd.lewis@yahoo.com',
+  phonenumber: '08043887881',
+  specialty: 'Cardiologist',
+  years_of_experience: 10,
+  picture: 'https://i.imgur.com/Ee3QiA9.jpg',
+  location: 'Owerri',
+},
+{
+  firstname: 'Kennedy',
+  lastname: 'Barack',
+  email: 'k.barack@gmail.com',
+  phonenumber: '08043887331',
+  specialty: 'Surgeon',
+  years_of_experience: 5,
+  picture: 'https://i.imgur.com/RP9R2O5.jpg',
+  location: 'PortHarcourt'
+}])
+=end
+# Appointment.delete_all
+
+Appointment.create!([{
+  patient_id: 2,
+  doctor_id: 1,
+  appointment_date: '2021-05-21T19:12:56.281Z',
+  location: 'Lagos',
+  doctor_name: 'Andrew John',
+},
+{
+  patient_id: 1,
+  doctor_id: 4,
+  appointment_date: '2021-08-21T19:12:56.281Z',
+  location: 'Abuja',
+  doctor_name: 'James Brown',
+},
+{
+  patient_id: 1,
+  doctor_id: 3,
+  appointment_date: '2021-10-21T19:12:56.281Z',
+  location: 'Enugu',
+  doctor_name: 'Green Okafor',
+}])
+
+=begin
+Patient.create!([{
+  firstname: 'Andrew',
+  lastname: 'John',
+  phone_number: '08097767124',
+  email: 'a.john@email.com',
+  address: '2 taiwo street Lagos',
+  password_digest: '123123',
+},
+{
+  firstname: 'James',
+  lastname: 'Faraday',
+  phone_number: '08056723451',
+  email: 'j.faraday@email.com',
+  address: '3 Abubakar street Abuja',
+  password_digest: '432432',
+}])
+=end
+
