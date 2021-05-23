@@ -15,18 +15,6 @@ ActiveRecord::Schema.define(version: 2021_05_21_130511) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "appointments", force: :cascade do |t|
-    t.bigint "patient_id", null: false
-    t.bigint "doctor_id", null: false
-    t.datetime "appointment_date"
-    t.string "location"
-    t.string "doctor_name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["doctor_id"], name: "index_appointments_on_doctor_id"
-    t.index ["patient_id"], name: "index_appointments_on_patient_id"
-  end
-
   create_table "doctors", force: :cascade do |t|
     t.string "firstname"
     t.string "lastname"
@@ -51,6 +39,4 @@ ActiveRecord::Schema.define(version: 2021_05_21_130511) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "appointments", "doctors"
-  add_foreign_key "appointments", "patients"
 end

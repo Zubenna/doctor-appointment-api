@@ -102,7 +102,7 @@ Doctor.create!([{
 }])
 =end
 # Appointment.delete_all
-
+=begin
 Appointment.create!([{
   patient_id: 2,
   doctor_id: 1,
@@ -124,7 +124,7 @@ Appointment.create!([{
   location: 'Enugu',
   doctor_name: 'Green Okafor',
 }])
-
+=end
 =begin
 Patient.create!([{
   firstname: 'Andrew',
