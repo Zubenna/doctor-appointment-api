@@ -1,5 +1,5 @@
 # Doctor.destroy_all
-=begin
+
 Doctor.create!([{
   firstname: 'Andrew',
   lastname: 'Okoh',
@@ -100,9 +100,26 @@ Doctor.create!([{
   picture: 'https://i.imgur.com/RP9R2O5.jpg',
   location: 'PortHarcourt'
 }])
-=end
+
+Patient.create!([{
+  firstname: 'Andrew',
+  lastname: 'John',
+  phone_number: '08097767124',
+  email: 'a.john@email.com',
+  address: '2 taiwo street Lagos',
+  password_digest: '123123',
+},
+{
+  firstname: 'James',
+  lastname: 'Faraday',
+  phone_number: '08056723451',
+  email: 'j.faraday@email.com',
+  address: '3 Abubakar street Abuja',
+  password_digest: '432432',
+}])
+
 # Appointment.delete_all
-=begin
+
 Appointment.create!([{
   patient_id: 2,
   doctor_id: 1,
@@ -124,23 +141,3 @@ Appointment.create!([{
   location: 'Enugu',
   doctor_name: 'Green Okafor',
 }])
-=end
-=begin
-Patient.create!([{
-  firstname: 'Andrew',
-  lastname: 'John',
-  phone_number: '08097767124',
-  email: 'a.john@email.com',
-  address: '2 taiwo street Lagos',
-  password_digest: '123123',
-},
-{
-  firstname: 'James',
-  lastname: 'Faraday',
-  phone_number: '08056723451',
-  email: 'j.faraday@email.com',
-  address: '3 Abubakar street Abuja',
-  password_digest: '432432',
-}])
-=end
-
