@@ -1,5 +1,5 @@
 # Doctor.destroy_all
-
+=begin
 Doctor.create!([{
   full_name: 'Andrew Okoh',
   email: 'a.okoh@gmail.com',
@@ -115,9 +115,9 @@ Patient.create!([{
   address: '6 Ezike street Aba',
   password_digest: 'memeee',
 }])
-
+=end
 # Appointment.delete_all
-=begin
+
 Appointment.create!([{
   patient_id: 2,
   doctor_id: 1,
@@ -139,4 +139,4 @@ Appointment.create!([{
   location: 'Enugu',
   doctor_name: 'Green Okafor',
 }])
-=end
+
