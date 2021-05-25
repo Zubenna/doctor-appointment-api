@@ -1,8 +1,7 @@
 # Doctor.destroy_all
 
 Doctor.create!([{
-  firstname: 'Andrew',
-  lastname: 'Okoh',
+  full_name: 'Andrew Okoh',
   email: 'a.okoh@gmail.com',
   phonenumber: '08123467820',
   specialty: 'Gynecologist',
@@ -11,8 +10,7 @@ Doctor.create!([{
   location: 'Lagos',
 },
 {
-  firstname: 'Carol',
-  lastname: 'Brown',
+  full_name: 'Carol Brown',
   email: 'c.brown@gmail.com',
   phonenumber: '08123887820',
   specialty: 'Gynecologist',
@@ -21,8 +19,7 @@ Doctor.create!([{
   location: 'Lagos',
 },
 {
-  firstname: 'Mary',
-  lastname: 'Okeke',
+  full_name: 'Mary Okeke',
   email: 'm.okeke@gmail.com',
   phonenumber: '08173887824',
   specialty: 'Paediatrician',
@@ -31,8 +28,7 @@ Doctor.create!([{
   location: 'Abuja',
 },
 {
-  firstname: 'Michael',
-  lastname: 'Igwe',
+  full_name: 'Michael Igwe',
   email: 'm.igwe@yahoo.com',
   phonenumber: '08173887855',
   specialty: 'Paediatrician',
@@ -41,18 +37,16 @@ Doctor.create!([{
   location: 'Abuja',
 },
 {
-  firstname: 'Thompson',
-  lastname: 'Clark',
+  full_name: 'Thompson Clark',
   email: 't.clark@yahoo.com',
   phonenumber: '08173887833',
   specialty: 'Neurologist',
   years_of_experience: 12,
-  picture: 'https://i.imgur.com/R7sYKTz.jpg',
+  picture: 'https://i.imgur.com/jhIKsTy.jpg',
   location: 'Port Harcourt',
 },
 {
-  firstname: 'Bill',
-  lastname: 'George',
+  full_name: 'Bill George',
   email: 'b.george@gmail.com',
   phonenumber: '08173887844',
   specialty: 'Surgeon',
@@ -61,8 +55,7 @@ Doctor.create!([{
   location: 'Port Harcourt',
 },
 {
-  firstname: 'Bridget',
-  lastname: 'Green',
+  full_name: 'Bridget Green',
   email: 'b.green@yahoo.com',
   phonenumber: '08343887844',
   specialty: 'Surgeon',
@@ -71,8 +64,7 @@ Doctor.create!([{
   location: 'Abuja',
 },
 {
-  firstname: 'Jennifer',
-  lastname: 'Hudson',
+  full_name: 'Jennifer Hudson',
   email: 'j.hudson@gmail.com',
   phonenumber: '08343887881',
   specialty: 'Cardiologist',
@@ -81,8 +73,7 @@ Doctor.create!([{
   location: 'Owerri',
 },
 {
-  firstname: 'Daniel',
-  lastname: 'Lewis',
+  full_name: 'Daniel Lewis',
   email: 'd.lewis@yahoo.com',
   phonenumber: '08043887881',
   specialty: 'Cardiologist',
@@ -91,8 +82,7 @@ Doctor.create!([{
   location: 'Owerri',
 },
 {
-  firstname: 'Kennedy',
-  lastname: 'Barack',
+  full_name: 'Kennedy Barack',
   email: 'k.barack@gmail.com',
   phonenumber: '08043887331',
   specialty: 'Surgeon',
@@ -102,24 +92,32 @@ Doctor.create!([{
 }])
 
 Patient.create!([{
-  firstname: 'Andrew',
-  lastname: 'John',
+  full_name: 'Andrew John',
+  username: 'Ajohn',
   phone_number: '08097767124',
   email: 'a.john@email.com',
   address: '2 taiwo street Lagos',
   password_digest: '123123',
 },
 {
-  firstname: 'James',
-  lastname: 'Faraday',
+  full_name: 'James Faraday',
+  username: 'Jfaraday',
   phone_number: '08056723451',
   email: 'j.faraday@email.com',
   address: '3 Abubakar street Abuja',
   password_digest: '432432',
+},
+{
+  full_name: 'Jesica Brown',
+  username: 'Jbrown',
+  phone_number: '08056723671',
+  email: 'j.brown@email.com',
+  address: '6 Ezike street Aba',
+  password_digest: 'memeee',
 }])
 
 # Appointment.delete_all
-
+=begin
 Appointment.create!([{
   patient_id: 2,
   doctor_id: 1,
@@ -141,3 +139,4 @@ Appointment.create!([{
   location: 'Enugu',
   doctor_name: 'Green Okafor',
 }])
+=end
