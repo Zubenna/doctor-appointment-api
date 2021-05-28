@@ -1,6 +1,8 @@
 module Api
   module V1
     class RegistrationsController < ApplicationController
+      skip_before_action :verify_authenticity_token
+
       def index
         patients = Patient.order('created_at ASC')
         if patients
