@@ -1,7 +1,7 @@
 module Api
   module V1
     class DoctorsController < ApplicationController
-      skip_before_action :verify_authenticity_token
+      # skip_before_action :verify_authenticity_token
 
       def index
         doctors = Doctor.order('created_at ASC')
