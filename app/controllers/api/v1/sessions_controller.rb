@@ -12,11 +12,11 @@ module Api
         end
       end
 
-      def is_logged_in?
+      def logged_in?
         if logged_in? && current_user
           render json: { logged_in: true, patient: current_user }, status: 201
         else
-          render json: { logged_in: false, message: 'no such user'}, status: 401
+          render json: { logged_in: false, message: 'no such user' }, status: 401
         end
       end
 
@@ -30,7 +30,6 @@ module Api
       def session_params
         params.permit(:username)
       end
-
     end
   end
 end

@@ -2,20 +2,21 @@ module Api
   module V1
     class RegistrationsController < ApplicationController
       def index
-        if patients = Patient.order('created_at ASC')
+        patients = Patient.order('created_at ASC')
+        if patients
           render json: { status: 'SUCCESS', message: 'Loaded Patient list', data: patients }, status: :ok
         else
-          render json: { status: 500, errors: ['no users found']}
+          render json: { status: 500, errors: ['no users found'] }
         end
       end
 
       def show
         patient = Patient.find(params[:id])
-          if patient
-            render json: { status: 'SUCCESS', message: 'Loaded Patient', data: patient }, status: :ok
-          else
-            render json: {status: 500, errors: ['user not found']}
-          end
+        if patient
+          render json: { status: 'SUCCESS', message: 'Loaded Patient', data: patient }, status: :ok
+        else
+          render json: { status: 500, errors: ['user not found'] }
+        end
       end
 
       def create
