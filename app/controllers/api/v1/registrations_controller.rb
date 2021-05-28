@@ -2,21 +2,29 @@ module Api
   module V1
     class RegistrationsController < ApplicationController
       def index
-        patients = Patient.order('created_at ASC')
-        render json: { status: 'SUCCESS', message: 'Loaded Patient list', data: patients }, status: :ok
+        if patients = Patient.order('created_at ASC')
+          render json: { status: 'SUCCESS', message: 'Loaded Patient list', data: patients }, status: :ok
+        else
+          render json: { status: 500, errors: ['no users found']}
+        end
       end
 
       def show
         patient = Patient.find(params[:id])
-        render json: { status: 'SUCCESS', message: 'Loaded Patient', data: patient }, status: :ok
+          if patient
+            render json: { status: 'SUCCESS', message: 'Loaded Patient', data: patient }, status: :ok
+          else
+            render json: {status: 500, errors: ['user not found']}
+          end
       end
 
       def create
         patient = Patient.new(patient_params)
         if patient.save
-          render json: { status: 'SUCCESS', message: 'Saved Patient', data: patient }, status: :ok
+          # login!
+          render json: { status: :created, message: 'Saved Patient', data: patient }, status: :ok
         else
-          render json: { status: 'ERROR', message: 'Patient not saved', data: patient.errors },
+          render json: { status: 500, message: 'Patient not saved', errors: patient.errors.full_messages },
                  status: :unprocessable_entity
         end
       end
@@ -24,7 +32,7 @@ module Api
       private
 
       def patient_params
-        params.permit(:firstname, :lastname, :phone_number, :email, :address, :password_digest)
+        params.permit(:full_name, :username, :phone_number, :email, :address, :password_digest)
       end
     end
   end
