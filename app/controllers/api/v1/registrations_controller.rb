@@ -23,7 +23,7 @@ module Api
         patient = Patient.create(patient_params)
         if patient.save
           # login!
-          render json: { status: :created, message: 'Saved Patient', data: patient }
+          render json: { status: 'created', message: 'Saved Patient', data: patient }
         else
           render json: { status: 500, message: 'Patient not saved', errors: patient.errors }
         end
