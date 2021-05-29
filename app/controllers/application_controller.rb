@@ -21,4 +21,8 @@ class ApplicationController < ActionController::Base
   def logout!
     session.clear
   end
+
+  def set_user
+    Patient.find_by(id: session[:patient_id])
+  end
 end

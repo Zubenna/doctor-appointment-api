@@ -1,23 +1,21 @@
 module Api
   module V1
     class RegistrationsController < ApplicationController
-      # skip_before_action :verify_authenticity_token
-
       def index
-        patients = Patient.order('created_at ASC')
+        patients = Patient.all
         if patients
-          render json: { status: 'SUCCESS', message: 'Loaded Patient list', data: patients }, status: :ok
+          render json: { status: 'SUCCESS', message: 'Loaded Patients list', data: patients }
         else
-          render json: { status: 500, errors: ['no users found'] }
+          render json: { status: 500, message: 'Patient not fount', data: patient.errors }
         end
       end
 
       def show
         patient = Patient.find(params[:id])
         if patient
-          render json: { status: 'SUCCESS', message: 'Loaded Patient', data: patient }, status: :ok
+          render json: { status: 'SUCCESS', message: 'Loaded Patient', data: patient }
         else
-          render json: { status: 500, errors: ['user not found'] }
+          render json: { status: 500, message: 'Patient not fount', data: patient.errors }
         end
       end
 
@@ -25,10 +23,9 @@ module Api
         patient = Patient.new(patient_params)
         if patient.save
           # login!
-          render json: { status: :created, message: 'Saved Patient', data: patient }, status: :ok
+          render json: { status: :created, message: 'Saved Patient', data: patient }
         else
-          render json: { status: 500, message: 'Patient not saved', errors: patient.errors.full_messages },
-                 status: :unprocessable_entity
+          render json: { status: 500, message: 'Patient not saved', errors: patient.errors }
         end
       end
 

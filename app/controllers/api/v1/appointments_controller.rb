@@ -1,8 +1,6 @@
 module Api
   module V1
     class AppointmentsController < ApplicationController
-      # skip_before_action :verify_authenticity_token
-
       def index
         appointments = Appointment.order('created_at ASC')
         render json: { status: 'SUCCESS', message: 'Loaded Appointmet list', data: appointments }, status: :ok
