@@ -1,5 +1,4 @@
 # Doctor.destroy_all
-=begin
 Doctor.create!([{
   full_name: 'Andrew Okoh',
   email: 'a.okoh@gmail.com',
@@ -90,7 +89,7 @@ Doctor.create!([{
   picture: 'https://i.imgur.com/RP9R2O5.jpg',
   location: 'PortHarcourt'
 }])
-=end
+
 # Patient.delete_all
 
 User.create!([{
