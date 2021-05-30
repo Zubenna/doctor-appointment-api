@@ -90,14 +90,17 @@ Doctor.create!([{
   picture: 'https://i.imgur.com/RP9R2O5.jpg',
   location: 'PortHarcourt'
 }])
+=end
+# Patient.delete_all
 
-Patient.create!([{
+User.create!([{
   full_name: 'Andrew John',
   username: 'Ajohn',
   phone_number: '08097767124',
   email: 'a.john@email.com',
   address: '2 taiwo street Lagos',
-  password_digest: '123123',
+  password: '123123',
+  password_confirmation: '123123'
 },
 {
   full_name: 'James Faraday',
@@ -105,7 +108,8 @@ Patient.create!([{
   phone_number: '08056723451',
   email: 'j.faraday@email.com',
   address: '3 Abubakar street Abuja',
-  password_digest: '432432',
+  password: '432432',
+  password_confirmation: '432432'
 },
 {
   full_name: 'Jesica Brown',
@@ -113,30 +117,32 @@ Patient.create!([{
   phone_number: '08056723671',
   email: 'j.brown@email.com',
   address: '6 Ezike street Aba',
-  password_digest: 'memeee',
+  password: 'memeee',
+  password_confirmation: 'memeee'
 }])
-=end
-# Appointment.delete_all
 
+# Appointment.delete_all
+=begin
 Appointment.create!([{
-  patient_id: 2,
+  patient_id: 8,
   doctor_id: 1,
   appointment_date: '2021-05-21T19:12:56.281Z',
   location: 'Lagos',
-  doctor_name: 'Andrew John',
+  doctor_name: 'Andrew John'
 },
 {
-  patient_id: 1,
+  patient_id: 9,
   doctor_id: 4,
   appointment_date: '2021-08-21T19:12:56.281Z',
   location: 'Abuja',
-  doctor_name: 'James Brown',
+  doctor_name: 'James Brown'
 },
 {
-  patient_id: 1,
+  patient_id: 10,
   doctor_id: 3,
   appointment_date: '2021-10-21T19:12:56.281Z',
   location: 'Enugu',
-  doctor_name: 'Green Okafor',
+  doctor_name: 'Green Okafor'
 }])
+=end
 

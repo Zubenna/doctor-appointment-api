@@ -1,4 +1,4 @@
-class Patient < ApplicationRecord
+class User < ApplicationRecord
   has_secure_password
   before_save :downcase_email
 
@@ -6,10 +6,10 @@ class Patient < ApplicationRecord
   has_many :doctors, through: :appointments, dependent: :destroy
   validates_presence_of :full_name, :username, :phone_number, :email
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
-  validates_uniqueness_of :email
+  validates_uniqueness_of :email, :username
   validates :email,
             presence: true,
-            length: { maximum: 50 },
+            length: { maximum: 30 },
             format: { with: VALID_EMAIL_REGEX }
   validates :password_digest, presence: true
 
