@@ -92,7 +92,7 @@ Doctor.create!([{
 }])
 =end
 # Patient.delete_all
-
+=begin
 User.create!([{
   full_name: 'Andrew John',
   username: 'Ajohn',
@@ -120,29 +120,27 @@ User.create!([{
   password: 'memeee',
   password_confirmation: 'memeee'
 }])
-
+=end
 # Appointment.delete_all
-=begin
+
 Appointment.create!([{
-  patient_id: 8,
+  user_id: 1,
   doctor_id: 1,
   appointment_date: '2021-05-21T19:12:56.281Z',
   location: 'Lagos',
   doctor_name: 'Andrew John'
 },
 {
-  patient_id: 9,
+  user_id: 2,
   doctor_id: 4,
   appointment_date: '2021-08-21T19:12:56.281Z',
   location: 'Abuja',
   doctor_name: 'James Brown'
 },
 {
-  patient_id: 10,
+  user_id: 3,
   doctor_id: 3,
   appointment_date: '2021-10-21T19:12:56.281Z',
   location: 'Enugu',
   doctor_name: 'Green Okafor'
 }])
-=end
-

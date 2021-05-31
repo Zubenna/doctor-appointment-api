@@ -4,7 +4,7 @@ module Api
       def create
         @user = User.find_by(username: session_params[:username])
         if @user&.authenticate(session_params[:password])
-          login!
+          # login!
           render json: { status: 'created', logged_in: true, data: user }
         else
           render json: { status: 401, errors: user.errors }
