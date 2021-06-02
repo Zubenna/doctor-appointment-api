@@ -1,5 +1,5 @@
 # Doctor.destroy_all
-
+=begin
 Doctor.create!([{
   full_name: 'Andrew Okoh',
   email: 'a.okoh@gmail.com',
@@ -120,15 +120,22 @@ User.create!([{
   password: 'memeee',
   password_confirmation: 'memeee'
 }])
-
+=end
 # Appointment.delete_all
 
 Appointment.create!([{
   user_id: 1,
-  doctor_id: 1,
-  appointment_date: '2021-05-21T19:12:56.281Z',
-  location: 'Lagos',
-  doctor_name: 'Andrew John'
+  doctor_id: 5,
+  appointment_date: '2021-08-21T19:12:56.281Z',
+  location: 'Abuja',
+  doctor_name: 'James Brown'
+},
+{
+  user_id: 1,
+  doctor_id: 3,
+  appointment_date: '2021-08-21T19:12:56.281Z',
+  location: 'Abuja',
+  doctor_name: 'James Brown'
 },
 {
   user_id: 2,
@@ -136,11 +143,4 @@ Appointment.create!([{
   appointment_date: '2021-08-21T19:12:56.281Z',
   location: 'Abuja',
   doctor_name: 'James Brown'
-},
-{
-  user_id: 3,
-  doctor_id: 3,
-  appointment_date: '2021-10-21T19:12:56.281Z',
-  location: 'Enugu',
-  doctor_name: 'Green Okafor'
 }])

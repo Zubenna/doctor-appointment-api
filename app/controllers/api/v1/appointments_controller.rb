@@ -7,8 +7,12 @@ module Api
       end
 
       def show
-        appointment = Appointment.find(params[:id])
-        render json: { status: 'SUCCESS', message: 'Loaded Appointment', data: appointment }, status: :ok
+        appointments = Appointment.where(user_id: params[:id])
+        if appointments.empty?
+          render json: { error: 'Could not find the appointment' }, status: 404
+        else
+          render json: { status: 'SUCCESS', message: 'Loaded Appointment', data: appointments }, status: :ok
+        end
       end
 
       def create
