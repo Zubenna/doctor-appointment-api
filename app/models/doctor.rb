@@ -8,7 +8,7 @@ class Doctor < ApplicationRecord
   validates_uniqueness_of :email
   validates :email,
             presence: true,
-            length: { maximum: 30 },
+            length: { maximum: 60 },
             format: { with: VALID_EMAIL_REGEX }
 
   private

@@ -11,14 +11,14 @@ module Api
         if appointments.empty?
           render json: { error: 'Could not find the appointment' }, status: 404
         else
-          render json: { status: 'SUCCESS', message: 'Loaded Appointment', data: appointments }, status: :ok
+          render json: { status: 'SUCCESS', message: 'Loaded Appointment', data: appointments }, status: 200
         end
       end
 
       def create
         appointment = Appointment.new(appointment_params)
         if appointment.save
-          render json: { status: 'SUCCESS', message: 'Saved Appointment', data: appointment }, status: :ok
+          render json: { status: 'SUCCESS', message: 'Saved Appointment', data: appointment }, status: 200
         else
           render json: { status: 'ERROR', message: 'Appointment not saved', data: appointment.errors },
                  status: :unprocessable_entity

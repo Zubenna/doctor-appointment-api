@@ -5,7 +5,6 @@ Rails.application.routes.draw do
     end
   end
 
-  # resources :doctors, only: [:show, :create, :index, :delete]
   namespace 'api' do
     namespace 'v1' do 
       resources :registrations
