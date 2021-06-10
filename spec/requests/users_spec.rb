@@ -27,7 +27,7 @@ RSpec.describe 'Registrations Controller' do
         full_name: 'Daniel Obi',
         username: '',
         phone_number: '09087763456',
-        email: 'obi@yahoo.co
+        email: 'obi@yahoo.co',
         address: '10 Etiti Street Aba',
         password_digest: '123456'
       } }

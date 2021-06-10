@@ -122,7 +122,7 @@ User.create!([{
 }])
 =end
 # Appointment.delete_all
-
+=begin
 Appointment.create!([{
   user_id: 1,
   doctor_id: 5,
@@ -144,3 +144,4 @@ Appointment.create!([{
   location: 'Abuja',
   doctor_name: 'James Brown'
 }])
+=end

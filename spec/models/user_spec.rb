@@ -21,12 +21,12 @@ RSpec.describe User, type: :model do
 
   it 'checks email uniquness' do
     user2 = User.create(full_name: 'Daniel Obi', username: 'Zobi', phone_number: '09087763456',
-                        email: 'obi@yahoo.com', address: '10 Etiti Street Aba', password_digest: '123456')
+                        email: 'obi@yahoo.com', address: "'10' Etiti Street Aba", password_digest: 'memeee')
     expect(user2.valid?).to eql(false)
   end
   it 'checks username uniqueness' do
     user3 = User.create(full_name: 'Daniel Obi', username: 'Dobi', phone_number: '09087763456',
-                        email: 'webi@yahoo.com', address: '10 Etiti Street Aba', password_digest: '123456')
+                        email: 'webi@yahoo.com', address: "'10' Etiti Street Aba", password_digest: 'memeee')
     expect(user3.valid?).to eql(false)
   end
 
