@@ -6,15 +6,6 @@ module Api
         render json: { status: 'SUCCESS', message: 'Loaded Appointmet list', data: appointments }, status: :ok
       end
 
-      def show
-        appointments = Appointment.where(user_id: params[:id])
-        if appointments.empty?
-          render json: { error: 'Could not find the appointment' }, status: 404
-        else
-          render json: { status: 'SUCCESS', message: 'Loaded Appointment', data: appointments }, status: 200
-        end
-      end
-
       def create
         appointment = Appointment.new(appointment_params)
         if appointment.save
