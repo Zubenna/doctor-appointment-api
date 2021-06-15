@@ -33,8 +33,9 @@ This is an API Backend that feeds the doctor appointment app. This API is built 
 |  GET     | /api/v1/doctors/id      | False  |Fetch a doctor's details            |
 |  POST    | /api/v1/appointments    | False  |Create appointments                 |
 |  GET     | /api/v1/appointments/id | False  |Fetch booked appointments for a user|
+|  DELETE  | /api/v1/appointments/id | False  |Deletes an appointment for a user   |
+|  PATCH   | /api/v1/appointments/id | False  |Edit an appointment for a user      |
 |  POST    | /api/v1/logout          | False  |Logs out a current user             |
-
 
 ## Project SetUp (Reproduce project on local computer)
 
